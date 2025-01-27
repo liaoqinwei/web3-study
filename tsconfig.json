@@ -16,5 +16,7 @@
       "esnext"
     ],
     "target": "es2020",
+    "module": "NodeNext",
+    "moduleResolution": "nodenext"
   }
 }
