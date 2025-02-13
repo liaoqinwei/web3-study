@@ -23,8 +23,17 @@ export async function deploy() {
   const providersAccounts = await web3.eth.getAccounts();
   const defaultAccount = providersAccounts[0];
 
+  // 0xf7f98a687ccb154f823b305fa88a09e224c7b90affaf12be43c403927aad2ab7
+  // const persona = [
+  //   web3.utils.utf8ToHex('Musk'),
+  //   web3.utils.utf8ToHex('Biden'),
+  //   web3.utils.utf8ToHex('Trump'),
+  //   web3.utils.utf8ToHex('Lincoin'),
+  //   web3.utils.utf8ToHex('Kennedy'),
+  // ]
   const contractDeployer = contract.deploy({
     data: '0x' + bytecode,
+    // arguments: [persona]
   });
 
 

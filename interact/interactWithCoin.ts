@@ -14,7 +14,28 @@ export const interactWithCoin = async () => {
   contract.handleRevert = true;
 
   const providersAccounts = await web3.eth.getAccounts();
-  const defaultAccount = providersAccounts[0];
+  const minter = providersAccounts[0]
+  const defaultAccount = providersAccounts[1];
 
-  console.log(contract.methods)
+
+  // 造币
+  // console.log(await contract.methods.mint(defaultAccount, 200).send({
+  //   from: minter,
+  //   gas: '1000000',
+  //   gasPrice: '10000000000',
+  // }))
+
+
+  // 转账
+  // console.log(await contract.methods.send(defaultAccount, 50).send({
+  //   from: minter,
+  //   gas: '1000000',
+  //   gasPrice: '10000000000',
+  // }))
+
+  // 查询币
+  console.log(await contract.methods.balances(defaultAccount).call())
+
+
+
 }

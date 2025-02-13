@@ -30,7 +30,6 @@ const input = {
     },
   },
 };
-
 // Compile the Solidity code using solc
 if (!fs.existsSync(COMPILE_RESULT_PATH))
   fs.mkdirSync(COMPILE_RESULT_PATH)
