@@ -33,7 +33,7 @@ export async function deploy() {
   // ]
   const contractDeployer = contract.deploy({
     data: '0x' + bytecode,
-    // arguments: [persona]
+    arguments: [60 * 60, defaultAccount]
   });
 
 
